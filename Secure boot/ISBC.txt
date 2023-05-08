@@ -1,0 +1,15 @@
+Secure boot is a security mechanism used in embedded systems to ensure that only trusted software is loaded and executed on the target hardware. The secure boot process begins with the execution of the Initial System Boot Code (ISBC), which is responsible for initializing the hardware and loading the bootloader or operating system. The secure boot ISBC flow is a variation of the standard ISBC flow, with additional security measures to ensure that only authorized software is loaded and executed.
+
+The secure boot ISBC flow typically involves the following steps:
+
+1. Secure Boot ROM: The processor executes the Secure Boot ROM, which is a small piece of code that is stored in a secure, read-only memory on the chip. The Secure Boot ROM is designed to prevent unauthorized access to the system and to ensure that the ISBC and bootloader are trusted.
+
+2. Signature Verification: The Secure Boot ROM verifies the digital signature of the ISBC to ensure that it has not been modified or tampered with. The signature is usually based on a public key infrastructure (PKI) and provides a mechanism for authenticating the code. If the signature verification fails, the boot process is halted.
+
+3. ISBC Execution: Once the ISBC is verified, the Secure Boot ROM transfers control to the ISBC code, which initializes the hardware and sets up the memory map.
+
+4. Bootloader Verification: The ISBC code verifies the digital signature of the bootloader to ensure that it is trusted and has not been tampered with. If the bootloader signature verification fails, the boot process is halted.
+
+5. Bootloader Execution: Once the bootloader is verified, the ISBC transfers control to the bootloader, which loads the operating system or application code into memory and begins the normal boot process.
+
+The secure boot ISBC flow provides an additional layer of security to ensure that only trusted software is loaded and executed on the target hardware. The digital signature verification process provides a mechanism for authenticating the ISBC and bootloader, and prevents unauthorized access to the system. By ensuring that only authorized software is loaded and executed, the secure boot ISBC flow can help to protect the system against attacks and vulnerabilities.

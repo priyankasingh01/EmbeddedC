@@ -1,0 +1,5 @@
+SDMC (Secure Digital Memory Card) is a standard protocol used to interface with SD memory cards. Here is a sample C code for a SDMC driver to read and write data to an SD card:
+
+There is a file named sdmc.c for a sample SDMC driver code.
+
+This code uses the MMC (MultiMedia Card) IOCTL (Input/Output Control) interface to communicate with the SDMC driver. It first sets the block size of the SD card to 512 bytes using the MMC_SET_BLOCKLEN command. It then writes the string "Hello, world!" to the SD card using the MMC_WRITE_BLOCK command and reads it back using the MMC_READ_SINGLE_BLOCK command. The data is stored in a buffer of size SDMC_BLOCK_SIZE (which is set to 512 bytes) and is printed to the console using printf(). This code can be adapted for use with other SD cards by changing the SDMC_DEVICE macro to the appropriate device node.

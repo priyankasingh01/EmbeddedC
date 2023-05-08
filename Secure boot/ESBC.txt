@@ -1,0 +1,18 @@
+ESBC (Enhanced System Boot Code) is a secure boot mechanism used in embedded systems to ensure that only authorized software is loaded and executed on the target hardware. The ESBC secure boot flow is an enhanced version of the standard ISBC (Initial System Boot Code) flow with additional security features to protect against malicious attacks and unauthorized access.
+
+The ESBC secure boot flow typically involves the following steps:
+
+1. Pre-Boot Authentication: The ESBC code initiates the pre-boot authentication process to ensure that only authorized users can access the system. The pre-boot authentication process may involve a password, biometric authentication, or a smart card.
+
+2. Secure Boot ROM: The processor executes the Secure Boot ROM, which is a small piece of code that is stored in a secure, read-only memory on the chip. The Secure Boot ROM verifies the digital signature of the ESBC to ensure that it has not been modified or tampered with.
+
+3. ESBC Execution: Once the ESBC is verified, the Secure Boot ROM transfers control to the ESBC code, which initializes the hardware and sets up the memory map.
+
+4. Secure Storage: The ESBC uses secure storage to store the cryptographic keys and certificates required for authentication and verification. The keys and certificates are securely stored in a non-volatile memory, such as flash memory or a secure element.
+
+5. Signature Verification: The ESBC verifies the digital signature of the bootloader to ensure that it is trusted and has not been tampered with. The signature is usually based on a public key infrastructure (PKI) and provides a mechanism for authenticating the code.
+
+6. Bootloader Execution: Once the bootloader is verified, the ESBC transfers control to the bootloader, which loads the operating system or application code into memory and begins the normal boot process.
+
+The ESBC secure boot flow provides enhanced security features to protect against malicious attacks and unauthorized access. The pre-boot authentication process ensures that only authorized users can access the system, while the Secure Boot ROM and signature verification mechanisms prevent unauthorized code from being executed on the target hardware. The use of secure storage for cryptographic keys and certificates helps to prevent tampering or theft of sensitive information. By implementing the ESBC secure boot flow, embedded system designers can help to ensure the security and integrity of their systems.
+

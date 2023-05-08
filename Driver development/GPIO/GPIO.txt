@@ -1,0 +1,5 @@
+GPIO (General Purpose Input/Output) pins are used to interface microcontrollers with external hardware devices, such as sensors, actuators, and other electronic components. GPIO pins can be configured as inputs or outputs and can be used to read or write digital signals.
+
+There is a sample C code for a GPIO driver to control an LED connected to a GPIO pin in gpio.c file.
+
+This code uses memory mapping to access the GPIO controller on a Raspberry Pi board. It sets the GPIO pin connected to the LED as an output and then toggles the LED on and off every 500 ms using bitwise operations on the GPIO port registers. This code can be adapted for use with other GPIO pins by changing the GPIO pin number and the GPIO controller base address.

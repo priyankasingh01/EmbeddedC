@@ -1,0 +1,32 @@
+/dts-v1/;
+/ {
+    model = "MyBoard";
+    compatible = "myboard,custom-device";
+    memory {
+        device_type = "memory";
+        reg = <0x80000000 0x40000000>;
+    };
+    cpus {
+        #address-cells = <1>;
+        #size-cells = <0>;
+        cpu@0 {
+            compatible = "arm,cortex-a9";
+            device_type = "cpu";
+            reg = <0>;
+            clock-frequency = <1000000000>;
+        };
+    };
+    custom_device@0x10000000 {
+        compatible = "myboard,custom-device";
+        reg = <0x10000000 0x1000>;
+        interrupt-parent = <&gic>;
+        interrupts = <1 2>;
+    };
+    gic: interrupt-controller@1c810000 {
+        compatible = "arm,cortex-a9-gic";
+        reg = <0x1c810000 0x1000>;
+        interrupt-controller;
+        #interrupt-cells = <3>;
+        interrupt-controller;
+    };
+};

@@ -1,0 +1,11 @@
+SHA (Secure Hash Algorithm) is a family of cryptographic hash functions developed by the United States National Security Agency (NSA). The purpose of a hash function is to take an input (such as a file or message) and produce a fixed-length output that represents a unique digital fingerprint of the input. Hash functions are commonly used in cryptography to verify the integrity of data, such as verifying that a file has not been modified or tampered with.
+
+The SHA family includes several variations, with each version producing a different output size (in bits). The most commonly used versions of SHA are SHA-1, SHA-2, and SHA-3.
+
+SHA-1 produces a 160-bit output and was widely used for digital signatures and other applications, but it is now considered insecure due to its vulnerability to collision attacks. Collision attacks are when an attacker can create two different inputs that produce the same hash output, which can lead to security vulnerabilities.
+
+SHA-2 is a family of hash functions that includes SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, and SHA-512/256. These versions produce outputs of varying lengths, with SHA-256 and SHA-512 being the most commonly used. SHA-2 is currently considered a secure hash function and is widely used in many applications, including SSL/TLS certificates, digital signatures, and password storage.
+
+SHA-3 is the latest member of the SHA family and was designed to provide an alternative to the SHA-2 family. It produces outputs of varying lengths and is designed to be faster and more secure than SHA-2.
+
+In summary, SHA is a family of cryptographic hash functions used to produce a unique digital fingerprint of an input. It includes several versions, with SHA-2 being the most commonly used and considered secure. SHA-3 is the latest addition to the family, designed to provide an alternative to SHA-2 with improved speed and security.

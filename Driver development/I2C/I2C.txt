@@ -1,0 +1,6 @@
+I2C (Inter-Integrated Circuit) is a synchronous serial communication protocol used to communicate between microcontrollers, sensors, and other devices. It uses two bidirectional lines: SDA (serial data) and SCL (serial clock) to transmit and receive data. I2C devices are identified by their unique 7-bit or 10-bit addresses.
+To communicate with an I2C device, the master (usually a microcontroller) initiates the communication by sending a start condition (S) followed by the 7-bit or 10-bit address of the slave device. The slave device responds with an acknowledgment (ACK) signal, indicating that it is ready to communicate.
+Once the communication is established, the master and slave devices can transmit and receive data using the SDA and SCL lines. The data is transferred in packets of 8 bits, with each byte followed by an acknowledgment signal from the receiving device.
+A sample C code for an I2C driver to read data from a temperature sensor is mentioned in the i2c.c file in the same folder.
+
+The code uses the Linux I2Cdev interface to communicate with the temperature sensor connected to the I2C bus. It sets the slave device address, reads the temperature data from the sensor, and converts it to Celsius before printing it to the console. This code can be adapted for use with other I2C devices by changing the I2C address and register addresses.

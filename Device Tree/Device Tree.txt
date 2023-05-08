@@ -1,0 +1,15 @@
+Device Tree is a data structure used by many modern embedded systems to describe the hardware components of a system. It provides a way to describe hardware components in a way that is independent of the system architecture and operating system.
+
+There is an example of a Device Tree Source (DTS) file for a hypothetical board with an ARM Cortex-A9 processor and a custom peripheral connected to it named: device-tree.dts
+
+In this DTS file, we first specify the version of the device tree format with `/dts-v1/` and then define the root node of the device tree with `/`. We give the board a name with the `model` property and specify its compatibility with the `compatible` property.
+
+Next, we define the memory layout of the system with the `memory` node. We specify the type of the node with the `device_type` property and the memory region with the `reg` property.
+
+We then define the CPU with the `cpus` node. We specify the number of address cells with `#address-cells` and the number of size cells with `#size-cells`. We define the CPU with the `cpu@0` node, specifying its compatibility with the `compatible` property, its device type with the `device_type` property, its register with the `reg` property, and its clock frequency with the `clock-frequency` property.
+
+Next, we define the custom peripheral with the `custom_device@0x10000000` node. We specify its compatibility with the `compatible` property, its register with the `reg` property, and its interrupt properties with the `interrupt-parent` and `interrupts` properties.
+
+Finally, we define the interrupt controller with the `gic` node. We specify its compatibility with the `compatible` property, its register with the `reg` property, and its interrupt properties with the `interrupt-controller` and `#interrupt-cells` properties.
+
+This DTS file can be compiled into a Device Tree Blob (DTB) file, which can then be loaded by the bootloader and passed to the operating system. The operating system can then use the information in the DTB to configure the hardware components of the system.

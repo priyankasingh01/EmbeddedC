@@ -1,0 +1,5 @@
+Important NXP documents links:
+
+https://www.nxp.com/docs/en/user-guide/LSDKUG_Rev20.12.pdf
+
+
